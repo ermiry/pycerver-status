@@ -1,0 +1,5 @@
+FROM ermiry/pycerver:latest
+
+WORKDIR /home/status
+
+CMD ["/bin/bash"]
