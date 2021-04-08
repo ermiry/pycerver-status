@@ -2,8 +2,8 @@ import cerver.utils
 
 STATUS_VERSION = "0.1"
 STATUS_VERSION_NAME = "Version 0.1"
-STATUS_VERSION_DATE = "05/04/2021"
-STATUS_VERSION_TIME = "10:14 CST"
+STATUS_VERSION_DATE = "07/04/2021"
+STATUS_VERSION_TIME = "23:51 CST"
 STATUS_VERSION_AUTHOR = "Erick Salas"
 
 def status_version_print_full ():
