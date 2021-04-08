@@ -1,0 +1,30 @@
+import os
+
+import cerver
+
+from runtime import *
+
+RUNTIME = RUNTIME_TYPE_NONE
+
+PORT = 5000
+
+CERVER_RECEIVE_BUFFER_SIZE = cerver.CERVER_DEFAULT_RECEIVE_BUFFER_SIZE
+CERVER_TH_THREADS = cerver.CERVER_DEFAULT_POOL_THREADS
+CERVER_CONNECTION_QUEUE = cerver.CERVER_DEFAULT_CONNECTION_QUEUE
+
+def status_init ():
+	global RUNTIME
+
+	global PORT
+
+	global CERVER_RECEIVE_BUFFER_SIZE
+	global CERVER_TH_THREADS
+	global CERVER_CONNECTION_QUEUE
+
+	RUNTIME = runtime_from_string (os.environ.get ("RUNTIME"))
+
+	PORT = int (os.environ.get ("PORT"))
+
+	CERVER_RECEIVE_BUFFER_SIZE = int (os.environ.get ("CERVER_RECEIVE_BUFFER_SIZE"))
+	CERVER_TH_THREADS = int (os.environ.get ("CERVER_TH_THREADS"))
+	CERVER_CONNECTION_QUEUE = int (os.environ.get ("CERVER_CONNECTION_QUEUE"))
